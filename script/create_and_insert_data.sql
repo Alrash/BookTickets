@@ -144,9 +144,9 @@ insert into Area values("009", "Rome");
 insert into Area values("010", "London");
 insert into Area values("100", "Sydney");
 
-INSERT INTO `booktickets`.`flight` (`Num`, `SouId`, `DesId`, `SetOff`, `Arrive`, `TotNum`, `Business`, `Price`, `BusPrice`, `Discount`, `Cancel`) VALUES ('001', '001', '100', '2015-11-29 05:00:00', '2015-11-30 20:00:00', '400', '100', '6000', '8000', '1', 0);
+INSERT INTO `BookTickets`.`Flight` VALUES ('001', '001', '100', '2015-11-29 05:00:00', '2015-11-30 20:00:00', '400', '100', '6000', '8000', '1', 0);
 
-insert into `BookTickets`.`AgencyId` values('000', 'Nanjing Company', '');
+insert into `BookTickets`.`Agency` values('000', 'Nanjing Company', '');
 
 insert into `BookTickets`.`RealNum` values('001', '80', '250');
 
