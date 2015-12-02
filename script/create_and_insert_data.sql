@@ -1,4 +1,4 @@
-create `BookTickets`;
+create database `BookTickets`;
 
 use `BookTickets`;
 
