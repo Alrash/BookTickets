@@ -47,6 +47,7 @@ create table Tickets
 (
 	TicketsId	char(16)		not null primary key,
     Id			char(14)		not null,
+    Price		decimal(6, 2)	not null,
     Clear		bit				not null
 );
 
@@ -129,6 +130,13 @@ as
 			Passinfo.Remark, Info.Oranization
 	FROM    Info INNER JOIN
             Passinfo ON Info.Id = Passinfo.Id;
+            
+create view `Ticket_view`
+as
+	SELECT  Flight.Num, Tickets.TicketsId, Flight.SouId, Flight.DesId, Flight.SetOff,
+			Tickets.Id, Tickets.Price, Tickets.Clear
+	FROM    Tickets INNER JOIN
+			Flight ON Tickets.TicketsId = Flight.Num;
 
 
 insert into Area values("000", "Nanjing");
