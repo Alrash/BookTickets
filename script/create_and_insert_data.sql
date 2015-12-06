@@ -45,7 +45,7 @@ create table Flight
 
 create table Tickets
 (
-	TicketsId	char(16)		not null primary key,
+	TicketsId	char(18)		not null primary key,
     Id			char(14)		not null,
     Price		decimal(6, 2)	not null,
     Clear		bit				not null
@@ -136,7 +136,7 @@ as
 	SELECT  Flight.Num, Tickets.TicketsId, Flight.SouId, Flight.DesId, Flight.SetOff,
 			Tickets.Id, Tickets.Price, Tickets.Clear
 	FROM    Tickets INNER JOIN
-			Flight ON Tickets.TicketsId = Flight.Num;
+			Flight ON SUBSTRING(Tickets.TicketsId, 15, 3) = Flight.Num;
 
 
 insert into Area values("000", "Nanjing");
