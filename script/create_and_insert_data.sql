@@ -126,7 +126,7 @@ as
 
 create view `Info_view`
 as
-	SELECT  Info.Name, Info.Sex, Passinfo.Nickname, Passinfo.Password, Passinfo.Email, Info.Proof,
+	SELECT  Info.Id, Info.Name, Info.Sex, Passinfo.Nickname, Passinfo.Password, Passinfo.Email, Info.Proof,
 			Passinfo.Remark, Info.Oranization
 	FROM    Info INNER JOIN
             Passinfo ON Info.Id = Passinfo.Id;
