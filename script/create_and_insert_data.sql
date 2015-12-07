@@ -134,9 +134,9 @@ as
 create view `Ticket_view`
 as
 	SELECT  Flight.Num, Tickets.TicketsId, Flight.SouId, Flight.DesId, Flight.SetOff,
-			Tickets.Id, Tickets.Price, Tickets.Clear
+			Tickets.Price, Tickets.Id, Tickets.Clear
 	FROM    Tickets INNER JOIN
-			Flight ON SUBSTRING(Tickets.TicketsId, 15, 3) = Flight.Num;
+			Flight ON SUBSTRING(Tickets.TicketsId, 13, 3) = Flight.Num;
 
 
 insert into Area values("000", "Nanjing");
